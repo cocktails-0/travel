@@ -11,6 +11,14 @@
 
         });
 
+        $.get("user/findOne",{},function (user) {
+            if (user){
+                $("#my_favorite").html("我的收藏");
+                $("#exit").html("退出");
+            }
+        });
+
+
         //查询分类数据
         $.get("category/findAll", {}, function (data) {
             //[{cid:1,cname:国内游},{},{}]
@@ -57,8 +65,8 @@
         <div class="login">
 
             <span id="span_username"></span>
-            <a href="myfavorite.html" class="collection">我的收藏</a>
-            <a href="javascript:location.href='user/exit';">退出</a>
+            <a id="my_favorite" href="myfavorite.html" class="collection"></a>
+            <a id="exit" href="javascript:location.href='user/exit';"></a>
         </div>
     </div>
     <div class="header_wrap">
