@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="qst_travel_project:war">
+    <output-path>$PROJECT_DIR$/../qst_travel_project/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>qst_travel_project</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="travel-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="qst_travel_project:war exploded" />
+    </root>
+  </artifact>
+</component>
