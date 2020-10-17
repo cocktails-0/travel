@@ -1246,3 +1246,13 @@
 0:0:0:0:0:0:0:1 - - [17/Oct/2020:14:57:09 +0800] "GET /travel/header.html HTTP/1.1" 304 - http-bio-80-exec-4 2
 0:0:0:0:0:0:0:1 - - [17/Oct/2020:14:57:09 +0800] "GET /travel/user/findOne HTTP/1.1" 200 216 http-bio-80-exec-4 4
 0:0:0:0:0:0:0:1 - - [17/Oct/2020:14:57:09 +0800] "GET /travel/category/findAll HTTP/1.1" 200 247 http-bio-80-exec-2 10
+0:0:0:0:0:0:0:1 - - [17/Oct/2020:15:08:13 +0800] "GET /travel/myfavorite.html HTTP/1.1" 200 10797 http-bio-80-exec-2 67
+0:0:0:0:0:0:0:1 - - [17/Oct/2020:15:08:13 +0800] "GET /travel/images/collection_pic.jpg HTTP/1.1" 200 40968 http-bio-80-exec-3 7
+0:0:0:0:0:0:0:1 - - [17/Oct/2020:15:08:13 +0800] "GET /travel/header.html HTTP/1.1" 304 - http-bio-80-exec-4 14
+0:0:0:0:0:0:0:1 - - [17/Oct/2020:15:08:14 +0800] "GET /travel/user/findOne HTTP/1.1" 200 4 http-bio-80-exec-5 679
+0:0:0:0:0:0:0:1 - - [17/Oct/2020:15:08:14 +0800] "GET /travel/category/findAll HTTP/1.1" 200 247 http-bio-80-exec-1 774
+0:0:0:0:0:0:0:1 - - [17/Oct/2020:15:16:13 +0800] "GET /travel/header.html HTTP/1.1" 304 - http-bio-80-exec-8 4
+0:0:0:0:0:0:0:1 - - [17/Oct/2020:15:16:13 +0800] "GET /travel/user/findOne HTTP/1.1" 200 4 http-bio-80-exec-10 2
+0:0:0:0:0:0:0:1 - - [17/Oct/2020:15:16:13 +0800] "GET /travel/category/findAll HTTP/1.1" 200 247 http-bio-80-exec-9 17
+0:0:0:0:0:0:0:1 - - [17/Oct/2020:15:16:15 +0800] "GET /travel/user/findOne HTTP/1.1" 200 4 http-bio-80-exec-9 3
+0:0:0:0:0:0:0:1 - - [17/Oct/2020:15:16:15 +0800] "GET /travel/category/findAll HTTP/1.1" 200 247 http-bio-80-exec-10 23
