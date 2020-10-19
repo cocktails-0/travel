@@ -34,7 +34,7 @@ public class UserServlet extends BaseServlet {
 
         //验证校验
         String check = request.getParameter("check");
-        //从sesion中获取验证码
+        //从session中获取验证码
         HttpSession session = request.getSession();
         String checkcode_server = (String) session.getAttribute("CHECKCODE_SERVER");
         session.removeAttribute("CHECKCODE_SERVER");//为了保证验证码只能使用一次
@@ -220,7 +220,7 @@ public class UserServlet extends BaseServlet {
             String msg = null;
             if (flag) {
                 //激活成功
-                msg = "激活成功，请<a href='login.html'>登录</a>";
+                msg = "激活成功，请<a href='../login.html'>登录</a>";
             } else {
                 //激活失败
                 msg = "激活失败，请联系管理员!";

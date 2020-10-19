@@ -2,14 +2,21 @@ package cn.qst.travel.service.impl;
 
 import cn.qst.travel.dao.UserDao;
 import cn.qst.travel.dao.impl.UserDaoImpl;
+import cn.qst.travel.domain.Favorite;
+import cn.qst.travel.domain.PageBean;
 import cn.qst.travel.domain.User;
 import cn.qst.travel.service.UserService;
 import cn.qst.travel.util.MailUtils;
 import cn.qst.travel.util.UuidUtil;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
 public class UserServiceImpl implements UserService {
 
     private UserDao userDao = new UserDaoImpl();
+
     /**
      * 注册用户
      * @param user
@@ -32,8 +39,7 @@ public class UserServiceImpl implements UserService {
         userDao.save(user);
 
         //3.激活邮件发送，邮件正文？
-
-        String content="<a href='http://localhost/travel/active?code="+user.getCode()+"'>点击激活【青软   旅游网】</a>";
+        String content="<a href='http://localhost/travel/user/active?code="+user.getCode()+"'>点击激活【青软   旅游网】</a>";
 
         MailUtils.sendMail(user.getEmail(),content,"激活邮件");
 

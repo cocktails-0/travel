@@ -11,9 +11,9 @@
 
         });
 
-        $.get("user/findOne",{},function (user) {
-            if (user){
-                $("#my_favorite").html("我的收藏");
+        $.get("user/findOne", {}, function (user) {
+            if (user) {
+                //$("#my_favorite").html("我的收藏");
                 $("#exit").html("退出");
             }
         });
@@ -21,7 +21,7 @@
 
         //查询分类数据
         $.get("category/findAll", {}, function (data) {
-            //[{cid:1,cname:国内游},{},{}]
+            //[{cid:1,cname:国内游},{},{ }]
             var lis = '<li class="nav-active"><a href="index.html">首页</a></li>';
 
             //遍历数组,拼接字符串(<li>)
@@ -63,7 +63,6 @@
         </div>
         <!-- 登录状态  -->
         <div class="login">
-
             <span id="span_username"></span>
             <a id="my_favorite" href="myfavorite.html" class="collection"></a>
             <a id="exit" href="javascript:location.href='user/exit';"></a>
@@ -95,16 +94,6 @@
 <!-- 首页导航 -->
 <div class="navitem">
     <ul id="category" class="nav">
-        <!-- <li class="nav-active"><a href="index.html">首页</a></li>
-         <li><a href="route_list.html">门票</a></li>
-         <li><a href="route_list.html">酒店</a></li>
-         <li><a href="route_list.html">香港车票</a></li>
-         <li><a href="route_list.html">出境游</a></li>
-         <li><a href="route_list.html">国内游</a></li>
-         <li><a href="route_list.html">港澳游</a></li>
-         <li><a href="route_list.html">抱团定制</a></li>
-         <li><a href="route_list.html">全球自由行</a></li>
-         <li><a href="favoriterank.html">收藏排行榜</a></li>-->
     </ul>
 </div>
     
