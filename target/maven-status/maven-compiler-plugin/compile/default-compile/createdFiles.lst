@@ -18,6 +18,7 @@ cn\qst\travel\domain\Route.class
 cn\qst\travel\service\impl\CategoryServiceImpl.class
 cn\qst\travel\service\impl\UserServiceImpl.class
 cn\qst\travel\web\servlet\CategoryServlet.class
+cn\qst\travel\domain\MyFavorite.class
 cn\qst\travel\service\impl\FavoriteServiceImpl.class
 cn\qst\travel\service\impl\RouteServiceImpl.class
 cn\qst\travel\web\servlet\RouteServlet.class

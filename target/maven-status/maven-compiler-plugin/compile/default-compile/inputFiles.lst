@@ -31,6 +31,7 @@ E:\qst\javaee项目\travel\src\main\java\cn\qst\travel\util\JDBCUtils.java
 E:\qst\javaee项目\travel\src\main\java\cn\qst\travel\domain\Seller.java
 E:\qst\javaee项目\travel\src\main\java\cn\qst\travel\web\servlet\UserServlet.java
 E:\qst\javaee项目\travel\src\main\java\cn\qst\travel\dao\CategoryDao.java
+E:\qst\javaee项目\travel\src\main\java\cn\qst\travel\domain\MyFavorite.java
 E:\qst\javaee项目\travel\src\main\java\cn\qst\travel\service\impl\UserServiceImpl.java
 E:\qst\javaee项目\travel\src\main\java\cn\qst\travel\web\servlet\BaseServlet.java
 E:\qst\javaee项目\travel\src\main\java\cn\qst\travel\service\FavoriteService.java

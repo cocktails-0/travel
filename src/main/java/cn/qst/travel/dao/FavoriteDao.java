@@ -1,6 +1,9 @@
 package cn.qst.travel.dao;
 
 import cn.qst.travel.domain.Favorite;
+import cn.qst.travel.domain.MyFavorite;
+
+import java.util.List;
 
 public interface FavoriteDao {
 
@@ -25,4 +28,22 @@ public interface FavoriteDao {
      * @param uid
      */
     void add(int i, int uid);
+
+    // 1===================>
+    /**
+     * 查询用户uid的收藏总数
+     * @param uid 用户uid
+     * @return 收藏路线总数
+     */
+    int findCountByUid(int uid);
+
+    //2====================>
+    /**
+     * 分页查询用户uid的收藏记录
+     * @param uid 用户uid
+     * @param start 起始条目
+     * @param pageSize 每页显示条数
+     * @return MyFavorite Bean 对象构成的 List 集合
+     */
+    List<MyFavorite> findByUidAndPage(int uid, int start, int pageSize);
 }

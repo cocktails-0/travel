@@ -1,5 +1,7 @@
 package cn.qst.travel.web.servlet;
 
+import cn.qst.travel.domain.PageBean;
+import cn.qst.travel.domain.Route;
 import cn.qst.travel.service.impl.UserServiceImpl;
 import cn.qst.travel.domain.ResultInfo;
 import cn.qst.travel.domain.User;
@@ -228,5 +230,35 @@ public class UserServlet extends BaseServlet {
             response.setContentType("text/html;charset=utf-8");
             response.getWriter().write(msg);
         }
+    }
+
+
+
+    //9==============================>
+    /**
+     * 获取`我的收藏`方法
+     */
+    public void findMyFavorite(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+        // 获取session，取得用户对象
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");
+        if (user == null) {     // 用户未登录
+            writeValue(null, response);
+            return;
+        }
+
+        // 获取并处理浏览器请求属性
+        String currentPageStr = request.getParameter("currentPage");        // 当前页数
+        String pageSizeStr = request.getParameter("pageSize");              // 每页显示条数
+        int currentPage = this.parseInt(currentPageStr, 1);
+        int pageSize = this.parseInt(pageSizeStr, 8);
+
+        // 2.获取service，根据uid查rid，再根据rid查详情数据
+        PageBean<Route> routePageBean = service.favorPageQuery(user.getUid(), currentPage, pageSize);
+
+        // 3.将数据回写至浏览器
+        writeValue(routePageBean, response);
+
     }
 }
